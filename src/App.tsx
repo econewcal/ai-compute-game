@@ -81,7 +81,7 @@ function App() {
       <header className="app-header">
         <div className="app-title">
           <span className="title-main">AI COMPUTE COMPANY</span>
-          <span className="title-sub">SimCity for inference infrastructure</span>
+          <span className="title-sub">The AI inference strategy game</span>
         </div>
         <div className="player-stats">
           <div className="stat-chip stat-chip--cash">
