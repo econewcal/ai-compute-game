@@ -4,6 +4,7 @@ import { InfrastructurePanel } from './components/InfrastructurePanel';
 import { TechnologyPanel } from './components/TechnologyPanel';
 import { ResultsPanel } from './components/ResultsPanel';
 import { DebugPanel } from './components/DebugPanel';
+import { HelpModal } from './components/HelpModal';
 import { CONTRACTS } from './data/contracts';
 import type { PlayerState, SimulationResult } from './data/types';
 import {
@@ -29,6 +30,7 @@ function App() {
   const [contractPassed, setContractPassed] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
   const [showDebug, setShowDebug] = useState(false);
+  const [showHelp, setShowHelp] = useState(() => loadState() === null);
 
   const update = useCallback((newState: PlayerState) => {
     setPlayerState(newState);
@@ -90,6 +92,9 @@ function App() {
             <span className="chip-label">RESEARCH</span>
             <span className="chip-value">{playerState.research} RP</span>
           </div>
+          <button className="btn btn--ghost btn--sm" onClick={() => setShowHelp(true)}>
+            ?
+          </button>
           <button className="btn btn--ghost btn--sm" onClick={handleReset}>
             Reset
           </button>
@@ -143,6 +148,8 @@ function App() {
           </>
         )}
       </main>
+
+      {showHelp && <HelpModal onClose={() => setShowHelp(false)} />}
 
       {DEBUG_MODE && showDebug && (
         <aside className="debug-aside">

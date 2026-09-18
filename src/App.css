@@ -211,6 +211,62 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .btn--ghost:hover { border-color: var(--border-active); color: var(--text); }
 .btn--sm { padding: 4px 10px; font-size: 11px; border-radius: var(--radius-sm); }
 
+/* ── Help modal ───────────────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 200;
+  backdrop-filter: blur(2px);
+}
+.modal {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-active);
+  border-radius: 12px;
+  padding: 28px;
+  max-width: 480px;
+  width: calc(100% - 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+}
+.modal-header { display: flex; align-items: center; justify-content: space-between; }
+.modal-title { font-size: 18px; font-weight: 700; color: var(--accent); letter-spacing: 0.04em; }
+.modal-close { background: transparent; border: none; color: var(--text-muted); font-size: 18px; cursor: pointer; padding: 4px 8px; border-radius: var(--radius-sm); }
+.modal-close:hover { color: var(--text); background: var(--bg-card); }
+.modal-intro { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
+.modal-steps { display: flex; flex-direction: column; gap: 12px; }
+.modal-step { display: flex; gap: 12px; align-items: flex-start; }
+.step-num {
+  flex-shrink: 0;
+  width: 24px; height: 24px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono);
+  margin-top: 1px;
+}
+.modal-step div { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+.modal-step strong { color: var(--text); }
+.modal-tip {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px;
+  background: var(--yellow-dim);
+  border: 1px solid #f59e0b30;
+  border-radius: var(--radius);
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+.tip-label { font-size: 9px; font-weight: 700; color: var(--yellow); letter-spacing: 0.1em; background: #f59e0b20; padding: 2px 6px; border-radius: 4px; flex-shrink: 0; margin-top: 1px; }
+.modal-btn { margin-top: 4px; }
+
 /* ── Debug aside ──────────────────────────────────────────────────────── */
 .debug-aside { background: var(--bg-panel); border-top: 1px solid var(--border); padding: 16px 20px; }
 .debug-panel { font-family: var(--mono); font-size: 12px; }
