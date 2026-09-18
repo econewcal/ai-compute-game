@@ -37,7 +37,7 @@ export const CONTRACTS: Contract[] = [
     },
     requirements: {
       minThroughput: 200,
-      maxP99Latency: 350,
+      maxP99Latency: 400,
       maxHourlyCost: 6.0,
     },
     reward: { cash: 7000, research: 2 },
