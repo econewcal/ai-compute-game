@@ -42,7 +42,7 @@ export const GPU_DEFINITIONS: GPU[] = [
     power: 1000,
     purchaseCost: 16000,
     unlocked: false,
-    researchCost: 6,
+    researchCost: 3,
     description:
       'Cutting-edge GPU. Massive compute and memory capacity with improved power efficiency per FLOP. Top-tier cost.',
   },
