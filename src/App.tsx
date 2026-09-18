@@ -81,7 +81,7 @@ function App() {
       <header className="app-header">
         <div className="app-title">
           <span className="title-main">AI COMPUTE COMPANY</span>
-          <span className="title-sub">The AI inference strategy game</span>
+          <span className="title-sub">Build and manage your AI inference fleet</span>
         </div>
         <div className="player-stats">
           <div className="stat-chip stat-chip--cash">
